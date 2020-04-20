@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaTeTI</title>
+  <link rel="stylesheet" href="\tateti.css">
+
+</head>
+
+<script src="./tateti.js"></script>
+
+<body onload="ocultar()">
+
+  <header>
+    <div>
+      <h1 >TaTeTi</h1>
+      <label for="">Jugador 1</label>
+      <input type="text" name="jugador1" id="input1" oninput="validarInput()">
+
+
+      <label for="">Jugador 2</label>
+      <input type="text" name="jugador2" id="input2" oninput="validarInput()">
+
+      <button id="btn-iniciar" onclick="iniciarJuego()">Iniciar Juego</button>
+    
+
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section id="historial1">
+      <h3 id="titulo1">Historial Jugador1: </h3>
+      <h4 id= "nombreJugador1"></h4>
+
+      <div class="historial" id="historialJugador1">
+
+      </div>
+
+    </section>
+
+    <table id="tateti" >
+      <tr>
+        <td onmouseover="cambiarColor(event)" onmouseout="sacarColor(event)" onclick="colocarMarca(id)"
+          id="cuadro1">
+
+
+        </td>
+        <td onmouseover="cambiarColor(event)" onmouseout="sacarColor(event)" onclick="colocarMarca(id)"
+          id="cuadro2">
+        </td>
+        <td onmouseover="cambiarColor(event)" onmouseout="sacarColor(event)" onclick="colocarMarca(id)"
+          id="cuadro3">
+
+        </td>
+      </tr>
+      <tr>
+        <td onmouseover="cambiarColor(event)" onmouseout="sacarColor(event)" onclick="colocarMarca(id)"
+          id="cuadro4">
+
+        </td>
+        <td onmouseover="cambiarColor(event)" onmouseout="sacarColor(event)" onclick="colocarMarca(id)"
+          id="cuadro5">
+
+        </td>
+        <td onmouseover="cambiarColor(event)" onmouseout="sacarColor(event)" onclick="colocarMarca(id)"
+          id="cuadro6">
+
+        </td>
+      </tr>
+      <tr>
+        <td onmouseover="cambiarColor(event)" onmouseout="sacarColor(event)" onclick="colocarMarca(id)"
+          id="cuadro7">
+
+        </td>
+        <td onmouseover="cambiarColor(event)" onmouseout="sacarColor(event)" onclick="colocarMarca(id)"
+          id="cuadro8">
+
+        </td>
+        <td onmouseover="cambiarColor(event)" onmouseout="sacarColor(event)" onclick="colocarMarca(id)"
+          id="cuadro9">
+
+        </td>
+      </tr>
+    </table>
+
+    <section id="historial2">
+      <h3 id= "titulo2">Historial Jugador2: </h3>
+      <h4 id= "nombreJugador2"></h4>
+
+      <div class="historial" id="historialJugador2">
+
+      </div>
+
+    </section>
+
+    
+
+
+  </main>
+
+  <div id="cartel-ganador" class="cartel-ganador" >
+  </div>
+
+  <button onclick="reiniciar()">Reiniciar Juego</button>
+
+</body>
+
+</html>
